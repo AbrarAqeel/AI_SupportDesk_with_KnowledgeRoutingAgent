@@ -66,8 +66,6 @@ POSTGRES_PORT=5432
 POSTGRES_DB=aiSupportDesk
 POSTGRES_USER=your_user
 POSTGRES_PASSWORD=your_password
-HF_TOKEN=your_huggingface_token
-
 ```
 
 ### 3. Database Initialization
@@ -118,3 +116,4 @@ python testing/test_graph.py
 * **Vector**: "Explain ticket escalation." or "How do I reset my password?"
 * **External**: "What is the price of Bitcoin?"
 * **System**: "What can you do?"
+
