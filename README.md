@@ -2,7 +2,7 @@
 
 An intelligent, multi-source support assistant built with **LangGraph**, **FastAPI**, and **Streamlit**. The system intelligently routes user queries to the appropriate data source—PostgreSQL, a Vector Knowledge Base, or an External Mock API—while maintaining a deterministic logic flow.
 
-## 🚀 Overview
+## Overview
 
 This project implements a "Routing Agent" architecture that prioritizes correctness and data authority. It uses rule-based classification to ensure queries are handled by the correct internal tool before falling back to a static LLM response.
 
@@ -14,7 +14,7 @@ This project implements a "Routing Agent" architecture that prioritizes correctn
 * **External Mock API**: Predefined responses for real-world data like weather and cryptocurrency prices.
 * **Multi-Turn History**: Maintains a sliding window of the last 10 messages for conversation context.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Orchestration**: LangGraph, LangChain
 * **Backend**: FastAPI, Uvicorn
@@ -22,7 +22,7 @@ This project implements a "Routing Agent" architecture that prioritizes correctn
 * **Database**: PostgreSQL (Relational), ChromaDB (Vector)
 * **Models**: Sentence-Transformers (Embeddings)
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```text
 AISupportDesk/
@@ -40,7 +40,7 @@ AISupportDesk/
 
 ```
 
-## 🚦 Logic & Priority
+## Logic & Priority
 
 The system follows a strict **Routing Contract** to ensure predictable behavior:
 
@@ -49,7 +49,7 @@ The system follows a strict **Routing Contract** to ensure predictable behavior:
 3. **External Route**: Mock API for general info (weather/crypto).
 4. **LLM Fallback**: Provides a static system description or a "not enough information" response if no data is found.
 
-## 🔧 Setup & Installation
+## Setup & Installation
 
 ### 1. Prerequisites
 
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ```
 
-## 🏃 Usage
+## Usage
 
 Run the integrated runner to start both the FastAPI backend and the Streamlit UI:
 
@@ -96,7 +96,7 @@ python run.py
 * **UI**: `http://localhost:8501`
 * **API Docs**: `http://127.0.0.1:8000/docs`
 
-## 🧪 Testing
+## Testing
 
 The project includes automated scripts for verifying tools and graph logic:
 
@@ -112,9 +112,10 @@ python testing/test_graph.py
 
 ```
 
-## 📝 Example Queries
+## Example Queries
 
 * **Postgres**: "Show tickets for customer Alex Brown." or "Which city is customer 3 from?"
 * **Vector**: "Explain ticket escalation." or "How do I reset my password?"
 * **External**: "What is the price of Bitcoin?"
+
 * **System**: "What can you do?"
