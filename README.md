@@ -117,5 +117,4 @@ python testing/test_graph.py
 * **Postgres**: "Show tickets for customer Alex Brown." or "Which city is customer 3 from?"
 * **Vector**: "Explain ticket escalation." or "How do I reset my password?"
 * **External**: "What is the price of Bitcoin?"
-
 * **System**: "What can you do?"
